@@ -940,7 +940,7 @@ class DataGridBody extends React.Component<IProps> {
     return (
       <div
         ref={this.bodyRef}
-        className={'axui-datagrid-body'}
+        className={'qp-datagrid-body'}
         style={{ height: bodyHeight, touchAction: 'none' }}
         onMouseDown={this.onMouseDownBody}
         onClick={this.onClick}

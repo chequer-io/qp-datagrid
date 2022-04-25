@@ -58,7 +58,7 @@ class CellLabel extends React.PureComponent<{
         labelValue = (
           <div
             data-span={columnAttr}
-            className="axui-datagrid-check-box"
+            className="qp-datagrid-check-box"
             data-checked={selected}
             style={{
               width: rowSelectorSize + 'px',

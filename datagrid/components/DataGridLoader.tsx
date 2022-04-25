@@ -9,7 +9,7 @@ class DataGridLoader extends React.PureComponent<{
     }
 
     return (
-      <div className="axui-datagrid-loader">
+      <div className="qp-datagrid-loader">
         <div data-loader-spinner="" />
         <div data-loader-text="">Loading</div>
       </div>

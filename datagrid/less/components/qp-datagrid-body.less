@@ -1,0 +1,110 @@
+.qp-datagrid-body {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-panel='body-scroll'],
+[data-panel='left-body-scroll'],
+[data-panel='top-left-body-scroll'],
+[data-panel='top-body-scroll'] {
+  tr {
+    background-color: @qp-datagrid-row-bg-1;
+  }
+  tr.odded-line {
+    background-color: @qp-datagrid-row-bg-0;
+  }
+  tr.added-line {
+    background-color: @qp-datagrid-row-added-bg;
+    color: @qp-datagrid-row-added-color;
+    td.focused {
+      color: @qp-datagrid-row-added-color;
+    }
+  }
+  // tr.updated-line {
+  //   background-color: @qp-datagrid-row-updated-bg;
+  //   td {
+  //   }
+  // }
+  tr.deleted-line {
+    background-color: @qp-datagrid-row-deleted-bg;
+    color: @qp-datagrid-row-deleted-color;
+    td.focused {
+      background-color: @qp-datagrid-row-deleted-bg;
+      color: @qp-datagrid-row-deleted-color;
+    }
+  }
+  tr.error-line {
+    background-color: @qp-datagrid-row-error-bg;
+    color: @qp-datagrid-row-error-color;
+    td.focused {
+      background-color: @qp-datagrid-row-deleted-bg;
+      color: @qp-datagrid-row-error-color;
+    }
+  }
+}
+[data-panel='top-aside-body-scroll'],
+[data-panel='aside-body-scroll'],
+[data-panel='bottom-aside-body-scroll'] {
+  background-color: @qp-datagrid-aside-bg;
+  table tr td {
+    box-shadow: @qp-datagrid-header-column-box-shadow;
+  }
+  table {
+    tr.added-line {
+      td,
+      td.qp-datagrid-line-number.selected {
+        background-color: @qp-datagrid-row-added-bg;
+        box-shadow: none;
+      }
+    }
+    tr.updated-line {
+      td,
+      td.qp-datagrid-line-number.selected {
+        background-color: @qp-datagrid-row-updated-bg;
+        box-shadow: none;
+      }
+    }
+    tr.deleted-line {
+      td,
+      td.qp-datagrid-line-number.selected {
+        background-color: @qp-datagrid-row-deleted-bg;
+        box-shadow: none;
+      }
+    }
+    tr.error-line {
+      td,
+      td.qp-datagrid-line-number.selected {
+        @error-bg-darken: darken(@qp-datagrid-row-error-bg, 10%);
+        @error-bg-colors: (@qp-datagrid-row-error-bg, @error-bg-darken);
+        box-shadow: none;
+        .qp-background(to right, @error-bg-colors);
+      }
+    }
+  }
+}
+
+[data-panel='top-left-body-scroll'],
+[data-panel='left-body-scroll'] {
+  .qp-datagrid-frozen-border('vertical');
+}
+[data-scroll-container] {
+  .qp-transition(top 0.3s ease);
+  z-index: 2;
+}
+[data-scroll-container='top-aside-body-scroll-container'],
+[data-scroll-container='top-left-body-scroll-container'],
+[data-scroll-container='top-body-scroll-container'] {
+  .qp-datagrid-frozen-border('horizontal');
+}
+
+[data-scroll-container='bottom-aside-body-scroll-container'],
+[data-scroll-container='bottom-left-body-scroll-container'],
+[data-scroll-container='bottom-body-scroll-container'] {
+  background-color: @qp-datagrid-footsum-bg;
+  .qp-datagrid-frozen-border('bottom-horizontal');
+  table tr td {
+    border-bottom: 0 none;
+    border-top: @qp-datagrid-column-border;
+  }
+}

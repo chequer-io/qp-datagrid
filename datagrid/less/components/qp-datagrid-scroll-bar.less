@@ -1,23 +1,23 @@
-.axui-datagrid-scroll-bar {
+.qp-datagrid-scroll-bar {
   transition: background-color 300ms linear;
   position: relative;
   top: 0;
   left: 0;
   box-sizing: border-box;
-  border: @axui-datagrid-scroll-bar-border;
-  border-radius: @axui-datagrid-scroll-bar-border-radius;
+  border: @qp-datagrid-scroll-bar-border;
+  border-radius: @qp-datagrid-scroll-bar-border-radius;
   width: 100%;
   height: 100%;
-  background: @axui-datagrid-scroll-bar-bg-blur;
+  background: @qp-datagrid-scroll-bar-bg-blur;
 
   &:hover {
-    border: @axui-datagrid-scroll-bar-hover-border;
-    background: @axui-datagrid-scroll-bar-hover-bg !important;
+    border: @qp-datagrid-scroll-bar-hover-border;
+    background: @qp-datagrid-scroll-bar-hover-bg !important;
   }
 }
 
 [data-scroll-track='horizontal'] {
-  .axui-datagrid-scroll-bar {
+  .qp-datagrid-scroll-bar {
     &:before {
       content: '';
       display: block;
@@ -29,7 +29,7 @@
 }
 
 [data-scroll-track='vertical'] {
-  .axui-datagrid-scroll-bar {
+  .qp-datagrid-scroll-bar {
     &:before {
       content: '';
       display: block;

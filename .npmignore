@@ -1,6 +1,7 @@
 .idea
 .next
 customEffect
+datagrid
 node_modules
 pages
 public

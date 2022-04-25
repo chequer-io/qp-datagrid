@@ -44,8 +44,8 @@ class DataGridBodyBottomCell extends React.PureComponent<IProps> {
         colSpan={colSpan}
         rowSpan={rowSpan}
         className={`${
-          columnAttr === 'lineNumber' ? 'axui-datagrid-line-number' : ''
-        } ${columnAttr === 'rowSelector' ? 'axui-datagrid-row-selector' : ''}`}
+          columnAttr === 'lineNumber' ? 'qp-datagrid-line-number' : ''
+        } ${columnAttr === 'rowSelector' ? 'qp-datagrid-row-selector' : ''}`}
         style={{ height: columnHeight * colRowSpan, minHeight: '1px' }}
       >
         <CellLabelBottom

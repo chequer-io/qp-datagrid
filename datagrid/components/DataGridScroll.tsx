@@ -410,7 +410,7 @@ class DatagridScroll extends React.Component<IProps> {
     };
 
     return (
-      <div className="axui-datagrid-scroller">
+      <div className="qp-datagrid-scroller">
         {verticalScrollerWidth ? (
           <div data-scroll-track="vertical" style={verticalStyles}>
             {theme === 'default' && (
@@ -431,7 +431,7 @@ class DatagridScroll extends React.Component<IProps> {
               }
             >
               <div
-                className="axui-datagrid-scroll-bar"
+                className="qp-datagrid-scroll-bar"
                 style={verticalBarStyles}
                 onMouseDown={e =>
                   this.onMouseDownScrollBar(
@@ -480,7 +480,7 @@ class DatagridScroll extends React.Component<IProps> {
               }
             >
               <div
-                className="axui-datagrid-scroll-bar"
+                className="qp-datagrid-scroll-bar"
                 style={horizontalBarStyles}
                 onMouseDown={e =>
                   this.onMouseDownScrollBar(

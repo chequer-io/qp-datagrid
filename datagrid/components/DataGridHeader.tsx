@@ -90,7 +90,7 @@ class DataGridHeader extends React.Component<IProps> {
     };
 
     return (
-      <div className={'axui-datagrid-header'} style={{ height: headerHeight }}>
+      <div className={'qp-datagrid-header'} style={{ height: headerHeight }}>
         {asidePanelWidth !== 0 && (
           <DataGridHeaderPanel
             panelName={DataGridEnums.PanelNames.ASIDE_HEADER}

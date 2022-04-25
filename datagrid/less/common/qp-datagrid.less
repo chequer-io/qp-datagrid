@@ -1,4 +1,4 @@
-.axui-datagrid-sort-arrow(
+.qp-datagrid-sort-arrow(
   @arrow-size,
   @ratio-0,
   @ratio-1,
@@ -23,15 +23,15 @@
   opacity: @opacity;
 }
 
-.axui-datagrid-row-background() {
+.qp-datagrid-row-background() {
   &.hover {
-    background: @axui-datagrid-row-hover-bg;
+    background: @qp-datagrid-row-hover-bg;
   }
   &[data-grouping-tr='true'] {
-    background: @axui-datagrid-row-grouping-bg;
+    background: @qp-datagrid-row-grouping-bg;
   }
   &[data-selected='true'] {
-    background: @axui-datagrid-row-selected;
+    background: @qp-datagrid-row-selected;
     td {
       //color: #fff;
       //box-shadow: inset 1px 1px 0px 0px #fff;
@@ -40,7 +40,7 @@
         box-shadow: none;
       }
       &[data-column-attr='rowSelector'] {
-        .axui-datagrid-check-box {
+        .qp-datagrid-check-box {
           &:after {
             opacity: 1;
           }
@@ -49,10 +49,10 @@
     }
   }
   &[data-disable-selection='true'] {
-    // background: @axui-datagrid-row-selected;
+    // background: @qp-datagrid-row-selected;
     td {
       &[data-column-attr='rowSelector'] {
-        .axui-datagrid-check-box {
+        .qp-datagrid-check-box {
           cursor: not-allowed;
           &:after {
             opacity: 0;
@@ -64,22 +64,22 @@
 
   // mergeCells 대상 컬럼 배경생 통일.
   td.merged {
-    background: @axui-datagrid-row-bg-1;
+    background: @qp-datagrid-row-bg-1;
   }
 }
 
-.axui-datagrid-cell {
+.qp-datagrid-cell {
   box-sizing: border-box;
   //overflow: hidden;
   position: relative;
   padding: 0;
   border: 0 none;
-  border-right: @axui-datagrid-column-border;
-  border-bottom: @axui-datagrid-column-border;
+  border-right: @qp-datagrid-column-border;
+  border-bottom: @qp-datagrid-column-border;
   &:last-child {
     border-right: none;
   }
-  &.axui-datagrid-header-column {
+  &.qp-datagrid-header-column {
     cursor: default;
 
     [data-filter] {
@@ -105,15 +105,15 @@
     }
 
     &:hover {
-      background: @axui-datagrid-row-hover-bg;
+      background: @qp-datagrid-row-hover-bg;
       [data-filter] {
         opacity: 0.7;
       }
     }
     &.selected {
-      .axui-background(
+      .qp-background(
         to bottom,
-        @axui-datagrid-header-column-focused-bg-colors
+        @qp-datagrid-header-column-focused-bg-colors
       );
     }
     &.focused {
@@ -126,7 +126,7 @@
         left: 50%;
         width: 0;
         height: 0;
-        border-top: 4px solid @axui-datagrid-header-column-focused-color;
+        border-top: 4px solid @qp-datagrid-header-column-focused-color;
         border-right: 4px solid transparent;
         border-bottom: 0 none;
         border-left: 4px solid transparent;
@@ -134,11 +134,11 @@
       }
     }
   }
-  &.axui-datagrid-header-corner {
+  &.qp-datagrid-header-corner {
     [data-span] {
       cursor: se-resize;
       &:before {
-        @triangle-border-width: @axui-datagrid-font-size / 4;
+        @triangle-border-width: @qp-datagrid-font-size / 4;
         position: absolute;
         right: @triangle-border-width;
         bottom: @triangle-border-width;
@@ -147,25 +147,25 @@
         width: 0;
         height: 0;
         border-bottom: solid @triangle-border-width
-          @axui-datagrid-header-column-color;
+          @qp-datagrid-header-column-color;
         border-right: solid @triangle-border-width
-          @axui-datagrid-header-column-color;
+          @qp-datagrid-header-column-color;
         border-left: solid @triangle-border-width transparent;
         border-top: solid @triangle-border-width transparent;
       }
     }
   }
-  &.axui-datagrid-line-number {
+  &.qp-datagrid-line-number {
     [data-span] {
       cursor: e-resize;
     }
     &:hover {
-      background: @axui-datagrid-row-hover-bg;
+      background: @qp-datagrid-row-hover-bg;
     }
     &.selected {
-      .axui-background(
+      .qp-background(
         to right,
-        @axui-datagrid-aside-column-focused-bg-colors
+        @qp-datagrid-aside-column-focused-bg-colors
       );
       box-shadow: none;
     }
@@ -181,31 +181,31 @@
         border-top: 4px solid transparent;
         border-right: 0 none;
         border-bottom: 4px solid transparent;
-        border-left: 4px solid @axui-datagrid-aside-column-focused-color;
+        border-left: 4px solid @qp-datagrid-aside-column-focused-color;
         margin-top: -4px;
       }
     }
   }
-  &.axui-datagrid-row-selector {
+  &.qp-datagrid-row-selector {
     &.focused {
-      background: @axui-datagrid-aside-bg;
+      background: @qp-datagrid-aside-bg;
     }
   }
   &.selected {
-    background: @axui-datagrid-cell-selected-bg;
+    background: @qp-datagrid-cell-selected-bg;
   }
   &.focused {
-    box-shadow: @axui-datagrid-cell-focused-box-shadow;
-    background: @axui-datagrid-cell-focused-bg;
+    box-shadow: @qp-datagrid-cell-focused-box-shadow;
+    background: @qp-datagrid-cell-focused-bg;
   }
   &.updated {
-    background: @axui-datagrid-cell-updated-bg;
-    color: @axui-datagrid-row-updated-color;
+    background: @qp-datagrid-cell-updated-bg;
+    color: @qp-datagrid-row-updated-color;
     &:before {
       content: ' ';
       display: block;
-      border-top: 3px solid @axui-datagrid-row-updated-color;
-      border-right: 3px solid @axui-datagrid-row-updated-color;
+      border-top: 3px solid @qp-datagrid-row-updated-color;
+      border-right: 3px solid @qp-datagrid-row-updated-color;
       border-bottom: 3px solid transparent;
       border-left: 3px solid transparent;
       position: absolute;
@@ -218,7 +218,7 @@
     user-select: none;
     box-sizing: border-box;
     display: block;
-    padding: @axui-datagrid-cell-padding;
+    padding: @qp-datagrid-cell-padding;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -241,11 +241,11 @@
       position: absolute;
       right: 0;
       top: 0;
-      width: @axui-datagrid-header-column-resizer-size;
+      width: @qp-datagrid-header-column-resizer-size;
       height: 100%;
       cursor: col-resize;
       &:hover {
-        background: @axui-datagrid-header-column-resizer-color;
+        background: @qp-datagrid-header-column-resizer-color;
         opacity: 0.5;
       }
     }
@@ -254,7 +254,7 @@
       font-size: 10px;
       margin-right: 14px;
       display: inline-block;
-      background: @axui-datagrid-header-column-sorter-bg-color;
+      background: @qp-datagrid-header-column-sorter-bg-color;
       border-radius: 2px;
       line-height: 10px;
       padding: 2px 2px;
@@ -263,11 +263,11 @@
         &:before {
           top: 2px;
           right: -9px;
-          .axui-datagrid-sort-arrow(
-            @axui-datagrid-header-sorter-size,
+          .qp-datagrid-sort-arrow(
+            @qp-datagrid-header-sorter-size,
             2.5,
             2,
-            @axui-datagrid-header-sorter-color,
+            @qp-datagrid-header-sorter-color,
             0.8,
             'up'
           );
@@ -283,11 +283,11 @@
         &:after {
           bottom: 2px;
           right: -9px;
-          .axui-datagrid-sort-arrow(
-            @axui-datagrid-header-sorter-size,
+          .qp-datagrid-sort-arrow(
+            @qp-datagrid-header-sorter-size,
             2.5,
             2,
-            @axui-datagrid-header-sorter-color,
+            @qp-datagrid-header-sorter-color,
             0.8,
             'down'
           );
@@ -305,16 +305,16 @@
     cursor: pointer;
   }
 
-  // todo : @axui-datagrid-cell-editInput-border 변수 정리
+  // todo : @qp-datagrid-cell-editInput-border 변수 정리
   [data-inline-edit] {
     background-color: transparent;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border: @axui-datagrid-cell-editInput-border;
+    border: @qp-datagrid-cell-editInput-border;
     display: block;
     outline: none;
-    padding: @axui-datagrid-cell-padding;
+    padding: @qp-datagrid-cell-padding;
     font-size: inherit;
   }
 
@@ -324,12 +324,12 @@
     align-items: center;
     flex-wrap: wrap;
     cursor: pointer;
-    .axui-datagrid-check-box {
+    .qp-datagrid-check-box {
       flex: none;
     }
     label {
       display: inline-block;
-      padding-left: @axui-datagrid-cell-padding-row-selector;
+      padding-left: @qp-datagrid-cell-padding-row-selector;
     }
     &.disabled {
       opacity: 0.5;
@@ -337,14 +337,14 @@
     }
   }
 
-  .axui-datagrid-check-box {
+  .qp-datagrid-check-box {
     cursor: pointer;
     box-sizing: border-box;
     display: inline-block;
     position: relative;
-    border: @axui-datagrid-cell-checkbox-border;
-    border-radius: @axui-datagrid-cell-checkbox-border-radius;
-    .axui-background(to bottom, @axui-datagrid-cell-checkbox-bg-colors);
+    border: @qp-datagrid-cell-checkbox-border;
+    border-radius: @qp-datagrid-cell-checkbox-border-radius;
+    .qp-background(to bottom, @qp-datagrid-cell-checkbox-bg-colors);
     height: 100%;
     width: 100%;
     &:after {
@@ -354,7 +354,7 @@
       position: absolute;
       top: 20%;
       right: 20%;
-      border: 0.2em solid @axui-datagrid-cell-checkbox-arrow-color;
+      border: 0.2em solid @qp-datagrid-cell-checkbox-arrow-color;
       border-top: none;
       border-right: none;
       background: transparent;
@@ -370,7 +370,7 @@
   }
 }
 
-.axui-datagrid-data-arrow() {
+.qp-datagrid-data-arrow() {
   [data-arrow] {
     content: ' ';
     display: block;
@@ -380,15 +380,15 @@
     width: 0;
     height: 0;
     border-style: solid;
-    border-color: @axui-datagrid-scroll-bar-bg-blur;
+    border-color: @qp-datagrid-scroll-bar-bg-blur;
     cursor: pointer;
     &:hover {
-      border-color: @axui-datagrid-scroll-bar-hover-bg;
+      border-color: @qp-datagrid-scroll-bar-hover-bg;
     }
   }
 }
 
-.axui-datagrid-frozen-border(@type: 'vertical') {
+.qp-datagrid-frozen-border(@type: 'vertical') {
   &:after {
     content: ' ';
     display: block;
@@ -396,7 +396,7 @@
   }
   & when (@type = 'vertical') {
     &:after {
-      border-right: @axui-datagrid-frozen-line-border;
+      border-right: @qp-datagrid-frozen-line-border;
       top: 0;
       right: 0;
       height: 100%;
@@ -404,7 +404,7 @@
   }
   & when (@type = 'bottom-horizontal') {
     &:after {
-      border-top: @axui-datagrid-frozen-line-border;
+      border-top: @qp-datagrid-frozen-line-border;
       top: 0;
       left: 0;
       width: 100%;
@@ -412,7 +412,7 @@
   }
   & when (@type = 'horizontal') {
     &:after {
-      border-bottom: @axui-datagrid-frozen-line-border;
+      border-bottom: @qp-datagrid-frozen-line-border;
       bottom: 0;
       left: 0;
       width: 100%;
@@ -420,30 +420,30 @@
   }
 }
 
-.axui-datagrid {
+.qp-datagrid {
   position: relative;
-  background: @axui-datagrid-bg;
+  background: @qp-datagrid-bg;
   overflow: hidden;
 
   &:focus {
-    outline: @axui-datagrid-outline;
+    outline: @qp-datagrid-outline;
   }
   &:hover,
   &:focus {
-    .axui-datagrid-scroll-bar {
-      background: @axui-datagrid-scroll-bar-bg;
+    .qp-datagrid-scroll-bar {
+      background: @qp-datagrid-scroll-bar-bg;
     }
-    .axui-datagrid-scroller {
+    .qp-datagrid-scroller {
       [data-scroll-track='vertical'] {
-        background: @axui-datagrid-scroll-track-bg;
+        background: @qp-datagrid-scroll-track-bg;
       }
       [data-scroll-track='horizontal'] {
-        background: @axui-datagrid-scroll-track-bg;
+        background: @qp-datagrid-scroll-track-bg;
       }
 
       [data-scroll-arrow] {
         [data-arrow] {
-          border-color: @axui-datagrid-scroll-bar-bg;
+          border-color: @qp-datagrid-scroll-bar-bg;
         }
       }
     }
@@ -457,9 +457,9 @@
     width: 100%;
     tr {
       border-bottom: 0 none;
-      .axui-datagrid-row-background();
+      .qp-datagrid-row-background();
       td {
-        .axui-datagrid-cell;
+        .qp-datagrid-cell;
       }
     }
   }

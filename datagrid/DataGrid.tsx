@@ -460,10 +460,10 @@ class DataGrid extends React.Component<IProps, IState> {
         <div
           tabIndex={-1}
           ref={this.rootNode}
-          className="axui-datagrid"
+          className="qp-datagrid"
           style={gridRootStyle}
         >
-          <div className="axui-datagrid-clip-board">
+          <div className="qp-datagrid-clip-board">
             <textarea ref={this.clipBoardNode} />
           </div>
           {mounted && (

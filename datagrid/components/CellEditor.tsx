@@ -394,7 +394,7 @@ class CellEditor extends React.PureComponent<IProps> {
         }}
       >
         <div
-          className="axui-datagrid-check-box"
+          className="qp-datagrid-check-box"
           data-checked={value}
           style={{
             width: lineHeight + 'px',

@@ -43,7 +43,7 @@ class CellLabelBottom extends React.PureComponent<{
       case '_row_selector_':
         labelValue = (
           <div
-            className="axui-datagrid-check-box"
+            className="qp-datagrid-check-box"
             data-span={columnAttr}
             data-checked={false}
             style={{

@@ -20,7 +20,7 @@ class CellLabel extends React.PureComponent<{
         if (optionsHeader.selector) {
           return (
             <div
-              className="axui-datagrid-check-box"
+              className="qp-datagrid-check-box"
               data-checked={listSelectedAll}
               style={{
                 width: rowSelectorSize + 'px',
@@ -110,10 +110,10 @@ class DatagridHeaderCell extends React.PureComponent<IProps> {
       optionsHeaderColumnPadding * 2 -
       optionsHeaderColumnBorderWidth;
 
-    const classNames: string[] = ['axui-datagrid-header-column'];
+    const classNames: string[] = ['qp-datagrid-header-column'];
 
     if (columnAttr === 'lineNumber') {
-      classNames.push('axui-datagrid-header-corner');
+      classNames.push('qp-datagrid-header-corner');
     }
     if (
       focusedCol > -1 &&

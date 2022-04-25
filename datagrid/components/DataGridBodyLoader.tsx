@@ -13,7 +13,7 @@ class DataGridBodyLoader extends React.PureComponent<{
 
     return (
       <div
-        className="axui-datagrid-body-loader"
+        className="qp-datagrid-body-loader"
         style={{
           height: bodyLoaderHeight,
         }}

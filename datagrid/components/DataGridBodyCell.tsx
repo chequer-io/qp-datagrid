@@ -94,8 +94,8 @@ class DataGridBodyCell extends React.PureComponent<{
     const cellHeight = columnHeight * rowSpan;
     const lineHeight = columnHeight - columnPadding * 2 - columnBorderWidth;
     const tdClassNames: string[] = [
-      `${columnAttr === 'lineNumber' ? 'axui-datagrid-line-number' : ''}`,
-      `${columnAttr === 'rowSelector' ? 'axui-datagrid-row-selector' : ''}`,
+      `${columnAttr === 'lineNumber' ? 'qp-datagrid-line-number' : ''}`,
+      `${columnAttr === 'rowSelector' ? 'qp-datagrid-row-selector' : ''}`,
     ];
 
     switch (columnAttr) {
